@@ -1,0 +1,421 @@
+2016-03-27 17:05:53,596 - INFO: Server initialized for eventlet.
+2016-03-27 17:05:53,879 - INFO: 8f81026151e0407fb1a329672016-03-27 17:24:21,682 - INFO:  * Restarting with stat
+2016-03-27 17:24:52,275 - INFO:  * Restarting with stat
+2016-03-27 17:28:40,733 - INFO:  * Restarting with stat
+53,879 - INFO: 8f81026151e0407fb1a329678a5392d7: Sending packet MESSAGE data 0
+2016-03-27 17:05:53,888 - INFO: 8f81026151e0407fb1a329678a5392d7: Received packet MESSAGE data 0/chat
+2016-03-27 17:05:53,906 - INFO: emitting event "my response" to 8f81026151e0407fb1a329678a5392d7 [/chat]
+2016-03-27 17:05:53,906 - INFO: 8f81026151e0407fb1a329678a5392d7: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:05:53,907 - INFO: 8f81026151e0407fb1a329678a5392d7: Sending packet MESSAGE data 0/chat
+2016-03-27 17:05:53,908 - INFO: 8f81026151e0407fb1a329678a5392d7: Received request to upgrade to websocket
+2016-03-27 17:05:53,910 - INFO: 8f81026151e0407fb1a329678a5392d7: Sending packet NOOP data None
+2016-03-27 17:05:53,912 - INFO: 8f81026151e0407fb1a329678a5392d7: Upgrade to websocket successful
+2016-03-27 17:05:58,426 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': 'a56ea419c8fd4e42ac0f584f21b6f787'}
+2016-03-27 17:05:58,426 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet MESSAGE data 0
+2016-03-27 17:05:58,444 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet MESSAGE data 0/chat
+2016-03-27 17:05:58,447 - INFO: emitting event "my response" to a56ea419c8fd4e42ac0f584f21b6f787 [/chat]
+2016-03-27 17:05:58,447 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:05:58,447 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet MESSAGE data 0/chat
+2016-03-27 17:05:58,448 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received request to upgrade to websocket
+2016-03-27 17:05:58,485 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet NOOP data None
+2016-03-27 17:05:58,501 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Upgrade to websocket successful
+2016-03-27 17:06:00,648 - INFO: bf76fb671b77402287cdcb429fa20d9c: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': 'bf76fb671b77402287cdcb429fa20d9c'}
+2016-03-27 17:06:00,648 - INFO: bf76fb671b77402287cdcb429fa20d9c: Sending packet MESSAGE data 0
+2016-03-27 17:06:00,667 - INFO: bf76fb671b77402287cdcb429fa20d9c: Received packet MESSAGE data 0/chat
+2016-03-27 17:06:00,671 - INFO: emitting event "my response" to bf76fb671b77402287cdcb429fa20d9c [/chat]
+2016-03-27 17:06:00,672 - INFO: bf76fb671b77402287cdcb429fa20d9c: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:06:00,672 - INFO: bf76fb671b77402287cdcb429fa20d9c: Sending packet MESSAGE data 0/chat
+2016-03-27 17:06:00,675 - INFO: bf76fb671b77402287cdcb429fa20d9c: Received request to upgrade to websocket
+2016-03-27 17:06:00,742 - INFO: bf76fb671b77402287cdcb429fa20d9c: Sending packet NOOP data None
+2016-03-27 17:06:00,756 - INFO: bf76fb671b77402287cdcb429fa20d9c: Upgrade to websocket successful
+2016-03-27 17:06:04,570 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': 'cf6d7377a9d4435db127d2cc18e7695c'}
+2016-03-27 17:06:04,570 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet MESSAGE data 0
+2016-03-27 17:06:04,646 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 0/test
+2016-03-27 17:06:04,646 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet MESSAGE data 0/test
+2016-03-27 17:06:04,649 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received request to upgrade to websocket
+2016-03-27 17:06:04,662 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet NOOP data None
+2016-03-27 17:06:04,667 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 2/test,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:06:04,667 - INFO: received event "my event" from cf6d7377a9d4435db127d2cc18e7695c [/test]
+2016-03-27 17:06:04,676 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Upgrade to websocket successful
+2016-03-27 17:06:10,714 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 2/test,["my event",{"data":"阿道夫"}]
+2016-03-27 17:06:10,714 - INFO: received event "my event" from cf6d7377a9d4435db127d2cc18e7695c [/test]
+2016-03-27 17:06:11,217 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 2/test,["my event",{"data":"阿道夫"}]
+2016-03-27 17:06:11,217 - INFO: received event "my event" from cf6d7377a9d4435db127d2cc18e7695c [/test]
+2016-03-27 17:06:12,446 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 2/test,["my event",{"data":"阿道夫"}]
+2016-03-27 17:06:12,446 - INFO: received event "my event" from cf6d7377a9d4435db127d2cc18e7695c [/test]
+2016-03-27 17:06:15,690 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet MESSAGE data 2/test,["my event",{"data":"dasfaf"}]
+2016-03-27 17:06:15,690 - INFO: received event "my event" from cf6d7377a9d4435db127d2cc18e7695c [/test]
+2016-03-27 17:06:24,533 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:06:24,533 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:06:30,562 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet PING data None
+2016-03-27 17:06:30,562 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet PONG data None
+2016-03-27 17:06:50,647 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:06:50,647 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:06:55,876 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet PING data None
+2016-03-27 17:06:55,877 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet PONG data None
+2016-03-27 17:07:16,390 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:07:16,390 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:07:22,877 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet PING data None
+2016-03-27 17:07:22,877 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet PONG data None
+2016-03-27 17:07:42,391 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:07:42,391 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:07:49,257 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet PING data None
+2016-03-27 17:07:49,257 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet PONG data None
+2016-03-27 17:08:08,677 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:08:08,677 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:08:14,880 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Received packet PING data None
+2016-03-27 17:08:14,880 - INFO: cf6d7377a9d4435db127d2cc18e7695c: Sending packet PONG data None
+2016-03-27 17:08:28,109 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': 'fa7051593f6a4fd6beaf9a4244a7c02d'}
+2016-03-27 17:08:28,109 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 0
+2016-03-27 17:08:28,184 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 0/chat
+2016-03-27 17:08:28,188 - INFO: emitting event "my response" to fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:28,188 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:08:28,189 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 0/chat
+2016-03-27 17:08:28,192 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received request to upgrade to websocket
+2016-03-27 17:08:28,197 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet NOOP data None
+2016-03-27 17:08:28,202 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:08:28,202 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:28,207 - INFO: emitting event "my response" to fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:28,207 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: I'm connected!"}]
+2016-03-27 17:08:28,220 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Upgrade to websocket successful
+2016-03-27 17:08:30,787 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfaf"}]
+2016-03-27 17:08:30,787 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:30,790 - INFO: emitting event "my response" to fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:30,790 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfaf"}]
+2016-03-27 17:08:32,283 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"阿道夫"}]
+2016-03-27 17:08:32,283 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:34,481 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:08:34,481 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:08:47,043 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"123"}]
+2016-03-27 17:08:47,043 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:47,047 - INFO: emitting event "my response" to fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:47,047 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: 123"}]
+2016-03-27 17:08:49,043 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"！@#"}]
+2016-03-27 17:08:49,043 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:50,905 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet MESSAGE data 2/chat,["my event",{"data":"!@#"}]
+2016-03-27 17:08:50,905 - INFO: received event "my event" from fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:50,908 - INFO: emitting event "my response" to fa7051593f6a4fd6beaf9a4244a7c02d [/chat]
+2016-03-27 17:08:50,908 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: !@#"}]
+2016-03-27 17:08:54,173 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:08:54,173 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:09:00,594 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:09:00,594 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:09:20,342 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:09:20,342 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:09:26,505 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:09:26,505 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:09:47,603 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:09:47,603 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:09:52,511 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:09:52,511 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:10:12,887 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:10:12,887 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:10:18,392 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:10:18,392 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:10:41,782 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:10:41,782 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:10:44,392 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:10:44,392 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:11:09,881 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:11:09,881 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:11:10,540 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:11:10,541 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:11:36,654 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:11:36,655 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:11:39,897 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:11:39,897 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:12:02,459 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:12:02,460 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:12:05,893 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:12:05,893 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:12:28,392 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:12:28,393 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:12:38,132 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:12:38,132 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:12:54,511 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:12:54,511 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:13:03,896 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:13:03,896 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:13:20,396 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:13:20,396 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:13:37,797 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:13:37,797 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:13:46,601 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:13:46,602 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:14:05,478 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:14:05,478 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:14:12,408 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:14:12,408 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:14:30,901 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:14:30,901 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:14:38,393 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:14:38,393 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:14:56,903 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:14:56,903 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:15:04,393 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:15:04,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:15:15,478 - INFO: 6e4839c97c944c08800079577e44dea6: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': '6e4839c97c944c08800079577e44dea6'}
+2016-03-27 17:15:15,479 - INFO: 6e4839c97c944c08800079577e44dea6: Sending packet MESSAGE data 0
+2016-03-27 17:15:15,507 - INFO: 6e4839c97c944c08800079577e44dea6: Received packet MESSAGE data 0/chat
+2016-03-27 17:15:15,555 - INFO: 6e4839c97c944c08800079577e44dea6: Sending packet MESSAGE data 0/chat
+2016-03-27 17:15:15,558 - INFO: 6e4839c97c944c08800079577e44dea6: Received request to upgrade to websocket
+2016-03-27 17:15:15,572 - INFO: 6e4839c97c944c08800079577e44dea6: Sending packet NOOP data None
+2016-03-27 17:15:15,573 - INFO: 6e4839c97c944c08800079577e44dea6: Received packet MESSAGE data 2/chat,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:15:15,573 - INFO: received event "my event" from 6e4839c97c944c08800079577e44dea6 [/chat]
+2016-03-27 17:15:15,585 - INFO: 6e4839c97c944c08800079577e44dea6: Upgrade to websocket successful
+2016-03-27 17:15:21,601 - INFO: 6e4839c97c944c08800079577e44dea6: Received packet MESSAGE data 2/chat,["my event",{"data":"adf"}]
+2016-03-27 17:15:21,601 - INFO: received event "my event" from 6e4839c97c944c08800079577e44dea6 [/chat]
+2016-03-27 17:15:22,903 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:15:22,904 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:15:29,504 - INFO: 6e4839c97c944c08800079577e44dea6: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfasfasdf"}]
+2016-03-27 17:15:29,504 - INFO: received event "my event" from 6e4839c97c944c08800079577e44dea6 [/chat]
+2016-03-27 17:15:30,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:15:30,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:15:31,518 - INFO: 6e4839c97c944c08800079577e44dea6: Received packet MESSAGE data 2/chat,["my event",{"data":"adsfadfadfa"}]
+2016-03-27 17:15:31,518 - INFO: received event "my event" from 6e4839c97c944c08800079577e44dea6 [/chat]
+2016-03-27 17:15:32,993 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': '6a2c7fc475974a168937ac66fe6b78da'}
+2016-03-27 17:15:32,993 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Sending packet MESSAGE data 0
+2016-03-27 17:15:33,043 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 0/chat
+2016-03-27 17:15:33,102 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Sending packet MESSAGE data 0/chat
+2016-03-27 17:15:33,105 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received request to upgrade to websocket
+2016-03-27 17:15:33,141 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Sending packet NOOP data None
+2016-03-27 17:15:33,142 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 2/chat,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:15:33,142 - INFO: received event "my event" from 6a2c7fc475974a168937ac66fe6b78da [/chat]
+2016-03-27 17:15:33,169 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Upgrade to websocket successful
+2016-03-27 17:15:37,249 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 2/chat,["my event",{"data":"adfadfasf"}]
+2016-03-27 17:15:37,249 - INFO: received event "my event" from 6a2c7fc475974a168937ac66fe6b78da [/chat]
+2016-03-27 17:15:38,617 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfasfdasf"}]
+2016-03-27 17:15:38,618 - INFO: received event "my event" from 6a2c7fc475974a168937ac66fe6b78da [/chat]
+2016-03-27 17:15:40,195 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfasdfdasfasf"}]
+2016-03-27 17:15:40,195 - INFO: received event "my event" from 6a2c7fc475974a168937ac66fe6b78da [/chat]
+2016-03-27 17:15:41,723 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfadsfdafsaf"}]
+2016-03-27 17:15:41,723 - INFO: received event "my event" from 6a2c7fc475974a168937ac66fe6b78da [/chat]
+2016-03-27 17:15:49,553 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:15:49,553 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:15:54,484 - INFO: 03f914d69379419db95dfab99290b016: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': '03f914d69379419db95dfab99290b016'}
+2016-03-27 17:15:54,485 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 0
+2016-03-27 17:15:54,502 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 0/chat
+2016-03-27 17:15:54,507 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:54,507 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:15:54,508 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 0/chat
+2016-03-27 17:15:54,509 - INFO: 03f914d69379419db95dfab99290b016: Received request to upgrade to websocket
+2016-03-27 17:15:54,588 - INFO: 03f914d69379419db95dfab99290b016: Sending packet NOOP data None
+2016-03-27 17:15:54,596 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 2/chat,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:15:54,597 - INFO: received event "my event" from 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:54,603 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:54,603 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: I'm connected!"}]
+2016-03-27 17:15:54,613 - INFO: 03f914d69379419db95dfab99290b016: Upgrade to websocket successful
+2016-03-27 17:15:56,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:15:56,395 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:15:57,470 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfadf"}]
+2016-03-27 17:15:57,470 - INFO: received event "my event" from 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:57,474 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:57,475 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfadf"}]
+2016-03-27 17:15:58,030 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Received packet PING data None
+2016-03-27 17:15:58,030 - INFO: 6a2c7fc475974a168937ac66fe6b78da: Sending packet PONG data None
+2016-03-27 17:15:59,298 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 2/chat,["my event",{"data":"adsfadsfasfasdf"}]
+2016-03-27 17:15:59,298 - INFO: received event "my event" from 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:59,300 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:15:59,300 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: adsfadsfasfasdf"}]
+2016-03-27 17:16:01,147 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfasdfasdfasfa"}]
+2016-03-27 17:16:01,147 - INFO: received event "my event" from 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:16:01,150 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:16:01,150 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfasdfasdfasfa"}]
+2016-03-27 17:16:02,935 - INFO: 03f914d69379419db95dfab99290b016: Received packet MESSAGE data 2/chat,["my event",{"data":"adsfasdfadsfa"}]
+2016-03-27 17:16:02,935 - INFO: received event "my event" from 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:16:02,937 - INFO: emitting event "my response" to 03f914d69379419db95dfab99290b016 [/chat]
+2016-03-27 17:16:02,937 - INFO: 03f914d69379419db95dfab99290b016: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: adsfasdfadsfa"}]
+2016-03-27 17:16:09,649 - INFO: 332ac2f7715845d7913d681b775e9e09: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': '332ac2f7715845d7913d681b775e9e09'}
+2016-03-27 17:16:09,649 - INFO: 332ac2f7715845d7913d681b775e9e09: Sending packet MESSAGE data 0
+2016-03-27 17:16:09,665 - INFO: 332ac2f7715845d7913d681b775e9e09: Received packet MESSAGE data 0/chat
+2016-03-27 17:16:09,667 - INFO: 332ac2f7715845d7913d681b775e9e09: Sending packet MESSAGE data 0/chat
+2016-03-27 17:16:09,669 - INFO: 332ac2f7715845d7913d681b775e9e09: Received request to upgrade to websocket
+2016-03-27 17:16:09,676 - INFO: 332ac2f7715845d7913d681b775e9e09: Received packet MESSAGE data 2/chat,["my event",{"data":"I'm connected!"}]
+2016-03-27 17:16:09,677 - INFO: received event "my event" from 332ac2f7715845d7913d681b775e9e09 [/chat]
+2016-03-27 17:16:09,679 - INFO: 332ac2f7715845d7913d681b775e9e09: Sending packet NOOP data None
+2016-03-27 17:16:09,683 - INFO: 332ac2f7715845d7913d681b775e9e09: Upgrade to websocket successful
+2016-03-27 17:16:14,906 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:16:14,906 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:16:18,043 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': '69fbf168a8024e91b1caa0c817b39bfa'}
+2016-03-27 17:16:18,043 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet MESSAGE data 0
+2016-03-27 17:16:18,075 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Received packet MESSAGE data 0/chat
+2016-03-27 17:16:18,084 - INFO: emitting event "my response" to 69fbf168a8024e91b1caa0c817b39bfa [/chat]
+2016-03-27 17:16:18,085 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:16:18,086 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet MESSAGE data 0/chat
+2016-03-27 17:16:18,089 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Received request to upgrade to websocket
+2016-03-27 17:16:18,096 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet NOOP data None
+2016-03-27 17:16:18,099 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Upgrade to websocket successful
+2016-03-27 17:16:19,907 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:16:19,907 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:16:22,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:16:22,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:16:26,723 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfa"}]
+2016-03-27 17:16:26,723 - INFO: received event "my event" from 69fbf168a8024e91b1caa0c817b39bfa [/chat]
+2016-03-27 17:16:26,726 - INFO: emitting event "my response" to 69fbf168a8024e91b1caa0c817b39bfa [/chat]
+2016-03-27 17:16:26,727 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfa"}]
+2016-03-27 17:16:33,596 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Received packet MESSAGE data 2/chat,["my event",{"data":"adsf"}]
+2016-03-27 17:16:33,596 - INFO: received event "my event" from 69fbf168a8024e91b1caa0c817b39bfa [/chat]
+2016-03-27 17:16:33,599 - INFO: emitting event "my response" to 69fbf168a8024e91b1caa0c817b39bfa [/chat]
+2016-03-27 17:16:33,599 - INFO: 69fbf168a8024e91b1caa0c817b39bfa: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: adsf"}]
+2016-03-27 17:16:47,796 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:16:47,796 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:16:48,395 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:16:48,395 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:16:48,446 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:16:48,446 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:17:11,237 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': ['websocket'], 'sid': 'dfdc0a11ed8140aababfba9085f913ac'}
+2016-03-27 17:17:11,238 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 0
+2016-03-27 17:17:11,262 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 0/chat
+2016-03-27 17:17:11,265 - INFO: emitting event "my response" to dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:17:11,265 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin has Connected!"}]
+2016-03-27 17:17:11,266 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 0/chat
+2016-03-27 17:17:11,287 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received request to upgrade to websocket
+2016-03-27 17:17:11,297 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet NOOP data None
+2016-03-27 17:17:11,313 - INFO: dfdc0a11ed8140aababfba9085f913ac: Upgrade to websocket successful
+2016-03-27 17:17:13,276 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:17:13,277 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:17:13,909 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:17:13,910 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:17:14,477 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:17:14,477 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:17:21,046 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"adsf"}]
+2016-03-27 17:17:21,046 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:17:21,050 - INFO: emitting event "my response" to dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:17:21,050 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: adsf"}]
+2016-03-27 17:17:27,754 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"adf爱的色放"}]
+2016-03-27 17:17:27,754 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:17:36,257 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:17:36,257 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:17:39,911 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:17:39,911 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:17:40,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:17:40,394 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:17:43,407 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:17:43,407 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:18:01,261 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:18:01,261 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:18:05,912 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:18:05,912 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:18:06,496 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:18:06,496 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:18:08,912 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:18:08,913 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:18:15,903 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfadsf"}]
+2016-03-27 17:18:15,903 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:18:15,905 - INFO: emitting event "my response" to dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:18:15,906 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfadsf"}]
+2016-03-27 17:18:26,266 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:18:26,267 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:18:31,913 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:18:31,914 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:18:32,611 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:18:32,612 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:18:34,913 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:18:34,913 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:18:41,231 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"adfadfa"}]
+2016-03-27 17:18:41,231 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:18:41,234 - INFO: emitting event "my response" to dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:18:41,234 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: adfadfa"}]
+2016-03-27 17:18:51,270 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:18:51,270 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:18:58,415 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:18:58,415 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:18:59,436 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:18:59,436 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:19:09,335 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:19:09,336 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:19:16,273 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:19:16,274 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:19:24,395 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:19:24,395 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:19:34,322 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:19:34,322 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:19:41,278 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:19:41,278 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:19:44,581 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:19:44,581 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:19:50,639 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:19:50,639 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:20:00,013 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:20:00,013 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:20:06,285 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:20:06,285 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:20:09,919 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:20:09,919 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:20:16,002 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"asdfasdfa"}]
+2016-03-27 17:20:16,002 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:20:16,005 - INFO: emitting event "my response" to dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:20:16,005 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet MESSAGE data 2/chat,["my response",{"data":"hanlin: asdfasdfa"}]
+2016-03-27 17:20:16,397 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:20:16,398 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:20:17,820 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet MESSAGE data 2/chat,["my event",{"data":"安师大罚点啥发发"}]
+2016-03-27 17:20:17,820 - INFO: received event "my event" from dfdc0a11ed8140aababfba9085f913ac [/chat]
+2016-03-27 17:20:26,408 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:20:26,408 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:20:31,292 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:20:31,293 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:20:36,414 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:20:36,414 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:20:42,563 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:20:42,563 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:20:57,373 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:20:57,373 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:21:00,014 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:21:00,014 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:21:01,922 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:21:01,922 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:21:08,669 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:21:08,669 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:21:26,010 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:21:26,010 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:21:30,721 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:21:30,721 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:21:30,767 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:21:30,768 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:21:34,474 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:21:34,474 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:21:52,429 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:21:52,429 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:21:57,281 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:21:57,281 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:21:57,965 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:21:57,965 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:22:00,397 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:22:00,397 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:22:17,926 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:22:17,926 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:22:22,926 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:22:22,926 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:22:26,700 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:22:26,700 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:22:28,474 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:22:28,474 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:22:46,894 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:22:46,894 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:22:52,504 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:22:52,505 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:22:54,393 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:22:54,393 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:22:54,823 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:22:54,823 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:23:18,396 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:23:18,396 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:23:21,317 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:23:21,317 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:23:23,627 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:23:23,627 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:23:29,469 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:23:29,469 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:23:44,422 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:23:44,422 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:23:51,829 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:23:51,829 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:23:54,745 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Received packet PING data None
+2016-03-27 17:23:54,746 - INFO: fa7051593f6a4fd6beaf9a4244a7c02d: Sending packet PONG data None
+2016-03-27 17:23:59,172 - INFO: dfdc0a11ed8140aababfba9085f913ac: Received packet PING data None
+2016-03-27 17:23:59,172 - INFO: dfdc0a11ed8140aababfba9085f913ac: Sending packet PONG data None
+2016-03-27 17:24:10,396 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Received packet PING data None
+2016-03-27 17:24:10,397 - INFO: a56ea419c8fd4e42ac0f584f21b6f787: Sending packet PONG data None
+2016-03-27 17:24:16,932 - INFO: 03f914d69379419db95dfab99290b016: Received packet PING data None
+2016-03-27 17:24:16,932 - INFO: 03f914d69379419db95dfab99290b016: Sending packet PONG data None
+2016-03-27 17:24:21,657 - INFO:  * Detected change in '/Users/hanpenny/myproject/renew/hello.py', reloading
