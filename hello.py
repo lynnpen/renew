@@ -17,7 +17,7 @@ import logging
 async_mode = 'eventlet'
 
 
-logging.basicConfig(filename='message.log',level=logging.DEBUG, filemode = 'w', format = '%(asctime)s - %(levelname)s: %(message)s')
+logging.basicConfig(filename='message.log',level=logging.DEBUG, filemode = 'a+', format = '%(asctime)s - %(levelname)s: %(message)s')
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'wocawoca'
@@ -61,6 +61,12 @@ class User(UserMixin, db.Model):
     def is_authenticated(self):
         return True
 
+class ChatLog(db.Model):
+    __tablename__ = 'chat'
+    id = db.Column(db.Integer, primary_key=True)
+    time = db.Column(db.String(64))
+    username = db.Column(db.String(64))
+    chatlog = db.Column(db.String(256))
 
 
 class LoginForm(Form):
@@ -142,13 +148,23 @@ def logout():
 @socketio.on('my event', namespace='/chat')
 def message(message):
     if message['data']:
-        emit('my response', {'data': '%s: %s' % (current_user.username, message['data'])}, broadcast=True)
+        emit('my response', {'data': '%s - %s: %s' % (datetime.now().strftime("%H:%M"), current_user.username, message['data'])}, broadcast=True)
+        chat = ChatLog(time=datetime.now().strftime("%H:%M"), username=current_user.username, chatlog=message['data'])
+        db.session.add(chat)
+        db.session.commit()
         logging.debug(current_user.username + ": " + message['data'])
 
 @socketio.on('connect', namespace='/chat')
 def connect():
     if current_user.is_authenticated:
-        emit('my response', {'data': '{0} has Connected!'.format(current_user.username)}, broadcast=True)
+        chat = ChatLog()
+        num = chat.query.count()
+        n = 10
+        while n>=0:
+            msg = chat.query.get(num-n)
+            emit('my response', {'data': '%s - %s: %s' % (msg.time, msg.username, msg.chatlog) }, broadcast=True)
+            n -= 1
+        #emit('my response', {'data': '%s - %s has Connected!' % (datetime.now().strftime("%H:%M"), current_user.username)}, broadcast=True)
     else:
         return False
 
