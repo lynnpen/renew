@@ -2,8 +2,9 @@
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
       <ul class="nav navbar-nav">
-         <li ><a href="/modpass">ModPass</a></li>
+         <li><a href="/modpass">ModPass</a></li>
          <li><a href="/logout">Logout</a></li>
+		 <li><a>在线用户: <span style="color:red;" id="status"></a></li>
       </ul>
       </div>
    </div>
@@ -24,8 +25,11 @@
             });
             socket.on('my response', function (msg) {
                 $('#messages').append($('<li>').text(msg.data));
-		$('#box').scrollTop($('ul#messages').height());
+		        $('#box').scrollTop($('ul#messages').height());
             });
+		    socket.on('login', function (msg) {
+				$('#status').text(msg.data);
+			});
         });
 
     </script>
