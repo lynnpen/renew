@@ -1,28 +1,42 @@
 {% extends 'base.html' %}
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
-      <ul class="nav navbar-nav">
-         <li><a href="/modpass">ModPass</a></li>
-         <li><a href="/logout">Logout</a></li>
-		 <li><a>在线用户: <span style="color:red;" id="status"></a></li>
-      </ul>
+      <div class="nav navbar-nav">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+         <span class="sr-only">切换导航</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+         <a class="navbar-brand" href="#">onlines: <span style="color:red;" id="status"></a>
       </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="/modpass">ModPass</a></li>
+         <li><a href="/logout">Logout</a></li>
+      </ul>
    </div>
-    </div>
+   </div>
 {% endblock %}
 
 {% block content %}
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.4.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.10.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='socket.io.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             namespace = '/chat';
             var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
-            $('form#emit').submit(function (event) {
+            $('#sendbtn').click(function (event) {
                 socket.emit('my event', {data: $('#m').val()});
                 $('#m').val('');
+				$('#m').focus;
                 return false;
             });
+			$('#m').keydown(function (event) {
+				if (event.keyCode == "13") {
+				    $('#sendbtn').click();
+					}
+					});
             socket.on('my response', function (msg) {
                 $('#messages').append($('<li>').text(msg.data));
 		        $('#box').scrollTop($('ul#messages').height());
@@ -34,19 +48,17 @@
 
     </script>
 
-    <div id="box" style="height:300px; overflow-y: auto; position: relative;">
+    <div id="box" style="height:400px; overflow-y: auto; position: relative;">
         <ul id="messages" style="overflow:hidden;"></ul>
         <ul id="messages_end" style="height:0px;overflow:hidden;"></ul>
     </div>
-    <form id="emit" method="POST" action="#">
         <div class="navbar navbar-fixed-bottom">
             <div class="input-group">
-                <input id="m" name="m" type="text" class="form-control" placeholder="Message"/>
+				<input style="height:40px;" autofocus="autofocus" id="m" type="text" class="form-control" placeholder="Message"/>
                   <span class="input-group-btn">
-                  <button type="submit" class="btn btn">Send</button>
+                  <button id="sendbtn" type="submit" class="btn btn">Send</button>
                   </span>
             </div>
         </div>
-    </form>
 {% endblock %}
 

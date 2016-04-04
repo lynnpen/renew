@@ -27,7 +27,7 @@ logging.basicConfig(filename='message.log',level=logging.DEBUG, filemode = 'a+',
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'wocawoca'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + '/root/data.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////root/data.sqlite'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
