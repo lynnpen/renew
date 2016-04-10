@@ -18,7 +18,6 @@ import os, time, eventlet
 import logging
 
 async_mode = 'eventlet'
-global userlist_
 userlist_ = []
 userlist = set(userlist_)
 
@@ -131,6 +130,11 @@ def login():
 def index():
     return render_template('index.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
+
 @app.route('/modpass', methods=['GET', 'POST'])
 @login_required
 def modpass():
@@ -161,6 +165,19 @@ def message(message):
         db.session.commit()
         logging.debug(current_user.username + ": " + message['data'])
 
+@socketio.on('imgmsg', namespace='/chat')
+@authenticated_only
+def imgmessage(imgmsg):
+    if imgmsg['data']:
+        room = 'honeymoon'
+        emit('newimg', {'data': '%s[%s]: %s' % ( current_user.username, datetime.now().strftime("%m/%d %H:%M"), imgmsg['data'])}, room=room)
+        #chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog=imgmsg['data'])
+        #db.session.add(chat)
+        #db.session.commit()
+        #logging.debug(current_user.username + ": " + imgmsg['data'])
+
+
+
 @socketio.on('connect', namespace='/chat')
 def connect():
     if current_user.is_authenticated and check_user(current_user.username):
@@ -174,7 +191,7 @@ def connect():
             msg = chat.query.get(num-n)
             emit('my response', {'data': '%s[%s]: %s' % (msg.username, msg.time, msg.chatlog) }, room=room)
             n -= 1
-        emit('my response', {'data': '%s[%s] has Connected!' % (current_user.username, datetime.now().strftime("%H:%M"))}, broadcast=True)
+        emit('my response', {'data': '%s[%s] has Connected!' % (current_user.username, datetime.now().strftime("%m/%d %H:%M"))}, broadcast=True)
         emit('login', {'data': ' | '.join(userlist)}, broadcast=True)
     else:
         return False

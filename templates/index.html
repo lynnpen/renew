@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block content %}
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.10.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-2.2.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='socket.io.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
@@ -32,33 +32,70 @@
 				$('#m').focus;
                 return false;
             });
+			$('#clearbtn').click(function () {
+				$('#messages').empty();
+			});
+			$('#sendimg').on("change", function(){
+				var $this = $(this),
+				    files = $this[0].files;
+				if (files.length != 0) {
+					var file = files[0],
+						reader = new FileReader();
+					if (!reader) {
+						Chat.warning("您的浏览器不支持FileReader");
+						$this.val('');
+						return;
+					};
+					reader.onload = function(e) {
+						$this.val('');
+                        socket.emit('imgmsg', {data: e.target.result});
+					};
+					reader.readAsDataURL(file);
+				};
+			});
+
 			$('#m').keydown(function (event) {
 				if (event.keyCode == "13") {
 				    $('#sendbtn').click();
-					}
-					});
+				}
+			});
+			socket.on('newimg', function (img) {
+				name_time = img.data.split(": ")[0];
+				imgdata = img.data.split(": ").slice(1);
+				$('#messages').append('<li>' + name_time + '<a href="' + imgdata + '" target="_blank"><img src="' + imgdata + '"/></a></li>');
+		        $('#box').scrollTop($('ul#messages').height());
+			});
             socket.on('my response', function (msg) {
-                $('#messages').append($('<li>').text(msg.data));
+				var newdata = msg.data.replace(/\[emoji\:(\d+)\]/g, '<img class="emoji" src="static/face/$1.gif" />');
+                $('#messages').append('<li>' + newdata);
 		        $('#box').scrollTop($('ul#messages').height());
             });
 		    socket.on('login', function (msg) {
 				$('#status').text(msg.data);
 			});
+
         });
 
     </script>
-
     <div id="box" style="height:400px; overflow-y: auto; position: relative;">
-        <ul id="messages" style="overflow:hidden;"></ul>
+        <ul id="messages" style="overflow:auto;"></ul>
         <ul id="messages_end" style="height:0px;overflow:hidden;"></ul>
     </div>
         <div class="navbar navbar-fixed-bottom">
+			<button type="button" id="clearbtn" class="btn btn-default btn-xs">clear</button>
+			<input id="emoji" type="button" class="btn btn-default btn-xs" value="emoji" title="emoji" />
+            <script type="text/javascript" src="static/emoji.js"></script>
+			<label for="sendimg" >
+				<input type="button" value="img" class="btn btn-default btn-xs" />
+			    <input id="sendimg" accept="image/*" type="file" style="position:absolute;opacity:0;top:0;overflow:hidden;" value="img"/>
+			</label>
             <div class="input-group">
 				<input style="height:40px;" autofocus="autofocus" id="m" type="text" class="form-control" placeholder="Message"/>
                   <span class="input-group-btn">
                   <button id="sendbtn" type="submit" class="btn btn">Send</button>
                   </span>
             </div>
+			<div id="emojiWrapper"></div>
         </div>
 {% endblock %}
 
