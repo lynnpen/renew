@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/modpass">modpass</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/logout">logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block page_content %}
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-1.4.2.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='socket.io.min.js')}}"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+  namespace = '/chat';
+  var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+  $('form#emit').submit(function(event){
+    socket.emit('my event',  {data: $('#m').val()});
+    $('#m').val('');
+    return false;
+  });
+  socket.on('my response', function(msg){
+    $('#messages').append($('<li>').text(msg.data));
+  });
+});
+
+function onGetMessage(context) 
+{
+messages.innerHTML+=context;
+messages_end.scrollIntoView(); 
+};
+
+</script>
+</head>
+  <body>
+    <div style="height:300px overflow:auto; position: relative;">
+    <ul id="messages" style="overflow:hidden;"></ul>
+    <ul id="messages_end" style="height:0px;overflow:hidden;"></ul>
+    </div>
+    <form id="emit" method="POST" action="#">
+      <div class="navbar navbar-fixed-bottom">
+      <div class="input-group">
+      <input id="m" name="m" type="text" class="form-control" placeholder="Message" />
+      <span class="input-group-btn">
+      <button type="submit" class="btn btn" >Send</button>
+      </span>
+      </div>
+      </div>
+    </form>
+  </body>
+{% endblock%}
