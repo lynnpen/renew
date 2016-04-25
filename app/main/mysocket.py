@@ -44,16 +44,18 @@ def message(message):
 def imgmessage(imgmsg):
     if imgmsg['data']:
         room = 'honeymoon'
-        img_data = imgmsg['data'].split(',', 1)
+        img_data = imgmsg['data'].split(',', 1)[1]
+	img_type = imgmsg['data'].split(';', 1)[0].split('/', 1)[1]
         binary_data = a2b_base64(img_data)
-        with open(FILEDIR + '/image.jpg', 'wb') as fd:
+	filename = current_user.username + '_' + datetime.now().strftime("%m%d-%H:%M:%S") + '.' + img_type
+        with open(FILEDIR + '/' + filename, 'wb') as fd:
             fd.write(binary_data)
 
         emit('newimg', {'data': '%s[%s]: %s' % ( current_user.username, datetime.now().strftime("%m/%d %H:%M"), imgmsg['data'])}, room=room)
-        #chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog=imgmsg['data'])
-        #db.session.add(chat)
-        #db.session.commit()
-        #logging.debug(current_user.username + ": " + imgmsg['data'])
+        chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog='filename:' + filename)
+        db.session.add(chat)
+        db.session.commit()
+        logging.debug(current_user.username + ": filename: " + filename)
 
 
 
