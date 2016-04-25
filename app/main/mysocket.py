@@ -1,3 +1,4 @@
+import os
 from flask.ext.socketio import emit, join_room, leave_room, close_room, rooms, disconnect
 from flask.ext.login import current_user
 from flask import request
@@ -5,11 +6,14 @@ from datetime import datetime
 from .. import db
 from ..models import User, ChatLog
 from .. import socketio
+from binascii import a2b_base64
 import logging
 import functools
 
 userlist_ = []
 userlist = set(userlist_)
+
+FILEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/upload'
 
 def check_user(user):
     rightone = User.query.filter_by(username=user).first()
@@ -40,6 +44,11 @@ def message(message):
 def imgmessage(imgmsg):
     if imgmsg['data']:
         room = 'honeymoon'
+        img_data = imgmsg['data'].split(',', 1)
+        binary_data = a2b_base64(img_data)
+        with open(FILEDIR + '/image.jpg', 'wb') as fd:
+            fd.write(binary_data)
+
         emit('newimg', {'data': '%s[%s]: %s' % ( current_user.username, datetime.now().strftime("%m/%d %H:%M"), imgmsg['data'])}, room=room)
         #chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog=imgmsg['data'])
         #db.session.add(chat)
@@ -61,7 +70,7 @@ def connect():
             msg = chat.query.get(num-n)
             emit('my response', {'data': '%s[%s]: %s' % (msg.username, msg.time, msg.chatlog) }, room=room)
             n -= 1
-        emit('my response', {'data': '%s[%s] has Connected!' % (current_user.username, datetime.now().strftime("%m/%d %H:%M"))}, broadcast=True)
+        #emit('my response', {'data': '%s[%s] has Connected!' % (current_user.username, datetime.now().strftime("%m/%d %H:%M"))}, broadcast=True)
         emit('login', {'data': ' | '.join(userlist)}, broadcast=True)
     else:
         return False
