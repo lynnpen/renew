@@ -1,10 +1,14 @@
 from flask import request, redirect, render_template, url_for, session, flash, g
 from flask.ext.login import login_user, logout_user, login_required, current_user
 from .. import db
+from .. import login_manager
 from ..models import User, ChatLog
 from . import main
 from .forms import *
 
+@login_manager.user_loader
+def load_user(userid):
+    return User.query.get(int(userid))
 
 @main.route('/', methods=['GET', 'POST'])
 def login():

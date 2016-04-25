@@ -52,7 +52,6 @@ def imgmessage(imgmsg):
 def connect():
     if current_user.is_authenticated and check_user(current_user.username):
         userlist.add(current_user.username)
-        print userlist
         room = 'honeymoon'
         join_room(room) 
         chat = ChatLog()
