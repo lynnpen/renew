@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%}Gallary{% endblock%}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='zoom.css') }}" media="all" />
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-2.2.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='zoom.min.js') }}"></script>
+{% endblock %}
+{% block page_content %}
+<div class="gallery">
+	{% for pic in pic_tuple %}
+	<div><a href="static/upload/{{ pic }}"><img src="static/thumbnail/{{ pic }}" /></a></div>
+    {% endfor %}
+</div>
+{% endblock%}
