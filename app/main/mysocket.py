@@ -8,12 +8,16 @@ from ..models import User, ChatLog
 from .. import socketio
 from binascii import a2b_base64
 import logging
+from PIL import Image
 import functools
 
+
+size = (128, 128)
 userlist_ = []
 userlist = set(userlist_)
 
 FILEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/upload'
+THUMBNAILDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/thumbnail'
 
 def check_user(user):
     rightone = User.query.filter_by(username=user).first()
@@ -45,11 +49,14 @@ def imgmessage(imgmsg):
     if imgmsg['data']:
         room = 'honeymoon'
         img_data = imgmsg['data'].split(',', 1)[1]
-	img_type = imgmsg['data'].split(';', 1)[0].split('/', 1)[1]
+        img_type = imgmsg['data'].split(';', 1)[0].split('/', 1)[1]
         binary_data = a2b_base64(img_data)
-	filename = current_user.username + '_' + datetime.now().strftime("%m%d-%H:%M:%S") + '.' + img_type
+        filename = current_user.username + '_' + datetime.now().strftime("%m%d-%H:%M:%S") + '.' + img_type
         with open(FILEDIR + '/' + filename, 'wb') as fd:
             fd.write(binary_data)
+        im = Image.open(FILEDIR + '/' + filename)
+        im.thumbnail(size)
+        im.save(THUMBNAILDIR + '/' + filename, "JPEG")
 
         emit('newimg', {'data': '%s[%s]: %s' % ( current_user.username, datetime.now().strftime("%m/%d %H:%M"), imgmsg['data'])}, room=room)
         chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog='filename:' + filename)

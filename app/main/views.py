@@ -1,3 +1,4 @@
+import os
 from flask import request, redirect, render_template, url_for, session, flash, g
 from flask.ext.login import login_user, logout_user, login_required, current_user
 from .. import db
@@ -25,6 +26,12 @@ def login():
 @login_required
 def index():
     return render_template('index.html')
+
+@main.route('/gallary')
+@login_required
+def gallary():
+    pic_tuple = os.listdir('app/upload')
+    return render_template('gallary.html', pic_tuple=pic_tuple)
 
 @main.route('/test')
 def test():
