@@ -7,6 +7,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:////root/data.sqlite'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    UPLOAD_FOLDER = '/root/uploads'
     @staticmethod
     def init_app(app):
         pass
