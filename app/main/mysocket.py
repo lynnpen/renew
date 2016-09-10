@@ -1,3 +1,4 @@
+# coding: utf-8
 import os
 from flask.ext.socketio import emit, join_room, leave_room, close_room, rooms, disconnect
 from flask.ext.login import current_user
@@ -10,6 +11,7 @@ from binascii import a2b_base64
 import logging
 from PIL import Image
 import functools
+import redis
 
 
 size = (128, 128)
@@ -18,6 +20,8 @@ userlist = set(userlist_)
 
 FILEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/upload'
 THUMBNAILDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/thumbnail'
+
+r = redis.StrictRedis(host='127.0.0.1', password='', port=6379, db=0)
 
 def check_user(user):
     rightone = User.query.filter_by(username=user).first()
@@ -38,6 +42,8 @@ def message(message):
     if message['data']:
         room = 'honeymoon'
         emit('my response', {'data': '%s[%s]: %s' % ( current_user.username, datetime.now().strftime("%m/%d %H:%M"), message['data'])}, room=room)
+        if current_user.username == 'test2':
+            r.rpush('receivewx', message['data'])
         chat = ChatLog(time=datetime.now().strftime("%m/%d %H:%M"), username=current_user.username, chatlog=message['data'])
         db.session.add(chat)
         db.session.commit()
