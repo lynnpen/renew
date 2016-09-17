@@ -9,7 +9,8 @@ from ..models import User, ChatLog
 from .. import socketio
 from binascii import a2b_base64
 import logging
-from PIL import Image
+from PIL import Image, ExifTags
+from StringIO import StringIO
 import functools
 import redis
 
@@ -57,10 +58,33 @@ def imgmessage(imgmsg):
         img_data = imgmsg['data'].split(',', 1)[1]
         img_type = imgmsg['data'].split(';', 1)[0].split('/', 1)[1]
         binary_data = a2b_base64(img_data)
+        image_file = StringIO(binary_data)
         filename = current_user.username + '_' + datetime.now().strftime("%m%d-%H:%M:%S") + '.' + img_type
-        with open(FILEDIR + '/' + filename, 'wb') as fd:
-            fd.write(binary_data)
-        im = Image.open(FILEDIR + '/' + filename)
+        im = Image.open(image_file)
+        lwrat = float(im.size[0]) / float(im.size[1])
+        if im.size[0] > 1024:
+            l = 1024
+            w = int(l / lwrat)
+        elif im.size[1] > 768:
+            w = 768
+            l = int(w * lwrat)
+        else:
+            w = im.size[1]
+            l = im.size[0]
+        im.resize((l, w))
+
+        for orientation in ExifTags.TAGS.keys() : 
+            if ExifTags.TAGS[orientation]=='Orientation' : break 
+        exif = dict(im._getexif().items())
+
+        if exif[orientation] == 3: 
+            im = im.rotate(180, expand=True)
+        elif exif[orientation] == 6: 
+            im = im.rotate(270, expand=True)
+        elif exif[orientation] == 8: 
+            im = im.rotate(90, expand=True)
+
+        im.save(FILEDIR + '/' + filename, "JPEG")
         im.thumbnail(size)
         im.save(THUMBNAILDIR + '/' + filename, "JPEG")
 

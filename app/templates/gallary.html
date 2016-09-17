@@ -1,16 +1,67 @@
 {% extends 'base.html' %}
 {% block title%}Gallary{% endblock%}
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='zoom.css') }}" media="all" />
+<link rel="stylesheet" href="{{ url_for('static', filename='blueimp-gallery.min.css') }}" media="all" />
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" media="all" />
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-image-gallery.css') }}" media="all" />
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript" src="{{ url_for('static', filename='jquery-2.2.3.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='zoom.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery.blueimp-gallery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bootstrap-image-gallery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='gal.js') }}"></script>
 {% endblock %}
 {% block page_content %}
-<div class="gallery">
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group">
+            <button id="image-gallery-button" type="button" class="btn btn-primary btn-lg">
+                <i class="glyphicon glyphicon-picture"></i>
+                Launch Image Gallery
+            </button>
+        </div>
+    </form>
+    <br>
+    <!-- The container for the list of example images -->
+	<div id="links">
 	{% for pic in pic_tuple %}
-	<div><a href="static/upload/{{ pic }}"><img src="static/thumbnail/{{ pic }}" /></a></div>
+	<a href="static/upload/{{ pic }}"><img src="static/thumbnail/{{ pic }}" /></a>
     {% endfor %}
+	</div>
+    <br>
+</div>
+<div id="blueimp-gallery" class="blueimp-gallery">                      
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->                       
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>                                               
+    <a class="close">×</a>                                              
+    <a class="play-pause"></a>                                          
+    <ol class="indicator"></ol>                                         
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->   
+    <div class="modal fade">
+        <div class="modal-dialog modal-lg">                             
+            <div class="modal-content">                                 
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>                       
+                </div>
+                <div class="modal-body next"></div>                     
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock%}
