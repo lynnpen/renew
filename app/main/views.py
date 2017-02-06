@@ -7,6 +7,7 @@ from ..models import User, ChatLog
 from . import main
 from .forms import *
 
+FILEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/upload'
 
 @login_manager.user_loader
 def load_user(userid):
@@ -24,6 +25,11 @@ def login():
         flash('Invalid username or password.')
     return render_template('login.html', form=form)
 
+
+@main.route('/static/upload/<string:filename>')
+@login_required
+def static(filename):
+    return send_from_directory(FILEDIR, filename=filename)
 
 @main.route('/index')
 @login_required
@@ -46,11 +52,25 @@ def upload(filename):
 @login_required
 def gallary():
     pic_tuple = os.listdir('app/upload')
-    return render_template('gallary.html', pic_tuple=pic_tuple)
+    tuple_list = []
+    for pic in pic_tuple:
+        pic_date = pic.split('_')[1].split('-')[0]
+        if not pic_date in tuple_list:
+            tuple_list.append(pic_date)
+    pic_list = []
+    tuple_list.sort(reverse=True)
+    for g in tuple_list:
+        p = []
+        for pic in pic_tuple:
+            if pic.find('_' + g + '-') != -1:
+                p.append(pic)
+        pic_list.append(p)
+                
+    return render_template('gallary.html', tuple_list=tuple_list, pic_list=pic_list)
 
-@main.route('/test')
-def test():
-    return render_template('1.html')
+#@main.route('/test')
+#def test():
+#    return render_template('1.html')
 
 @main.route('/modpass', methods=['GET', 'POST'])
 @login_required

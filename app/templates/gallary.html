@@ -25,8 +25,13 @@
     <br>
     <!-- The container for the list of example images -->
 	<div id="links">
-	{% for pic in pic_tuple %}
+	{% for date in tuple_list %}
+	<b>{{ date }}</b>
+	<br>
+	{% for pic in pic_list[tuple_list.index(date)] %}
 	<a href="static/upload/{{ pic }}"><img src="static/thumbnail/{{ pic }}" /></a>
+	{% endfor %}
+	<br>
     {% endfor %}
 	</div>
     <br>

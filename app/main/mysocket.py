@@ -59,7 +59,7 @@ def imgmessage(imgmsg):
         img_type = imgmsg['data'].split(';', 1)[0].split('/', 1)[1]
         binary_data = a2b_base64(img_data)
         image_file = StringIO(binary_data)
-        filename = current_user.username + '_' + datetime.now().strftime("%m%d-%H:%M:%S") + '.' + img_type
+        filename = current_user.username + '_' + datetime.now().strftime("%Y%m%d-%H:%M:%S") + '.' + img_type
         im = Image.open(image_file)
         lwrat = float(im.size[0]) / float(im.size[1])
         if im.size[0] > 1024:
